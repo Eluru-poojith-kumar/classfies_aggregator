@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: classifieds-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    envVars:
+      - key: MONGO_URL
+        value: mongodb+srv://<your_mongodb_cluster_url>
